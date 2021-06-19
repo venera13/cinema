@@ -3,11 +3,13 @@
 git clone https://github.com/venera13/movie.git
 git clone https://github.com/venera13/movieRating.git
 
-alias build_cinema = "cd ./cinema && make build"
-./build_cinema
+alias build_movie="cd ./movie && make build"
+build_movie
+unalias build_movie
 
-cd ./../rating
-make build
+alias build_rating="cd ./../movieRating && make build"
+build_rating
+unalias build_rating
 
 cd ./..
 docker-compose up
