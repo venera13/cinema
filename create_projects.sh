@@ -1,13 +1,13 @@
 #!/bin/bash
 
-git clone https://github.com/venera13/cinema.git
+git clone https://github.com/venera13/movie.git
 git clone https://github.com/venera13/movieRating.git
 
-cd cinema
+cd ./cinema
 make build
 
-cd ../rating
+cd ./../rating
 make build
 
-cd ..
+cd ./..
 docker-compose up
