@@ -1,6 +1,6 @@
 FROM debian:9-slim
 
-ADD ./bin/movieservice /app/bin/
+ADD ./movie/bin/movieservice /app/bin/
 WORKDIR /app
 COPY . .
 

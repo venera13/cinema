@@ -1,6 +1,6 @@
 FROM debian:9-slim
 
-ADD ./bin/ratingservice /app/bin/
+ADD ./movieRating/bin/ratingservice /app/bin/
 WORKDIR /app
 COPY . .
 
