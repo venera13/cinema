@@ -22,6 +22,7 @@ services:
     image: "mysql:8.0"
     ports:
       - "3370:3306"
+    restart: always
     container_name: movie-db
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
