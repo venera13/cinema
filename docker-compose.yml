@@ -20,6 +20,8 @@ services:
 
   movie-db:
     image: "mysql:8.0"
+    ports:
+      - "3370:3306"
     container_name: movie-db
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
@@ -51,6 +53,8 @@ services:
         condition: service_healthy
   rating-db:
     image: "mysql:8.0"
+    ports:
+      - "3371:3306"
     container_name: rating-db
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
