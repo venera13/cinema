@@ -34,7 +34,7 @@ services:
     volumes:
       - "db-data:/var/lib/mysql"
     depends_on:
-      movie-db:
+      rating-db:
         condition: service_healthy
 
   rating:
