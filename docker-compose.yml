@@ -33,6 +33,9 @@ services:
       timeout: 1s
     volumes:
       - "db-data:/var/lib/mysql"
+    depends_on:
+      movie-db:
+        condition: service_healthy
 
   rating:
     container_name: rating
