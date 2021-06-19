@@ -55,21 +55,17 @@ services:
     image: "mysql:8.0"
     ports:
       - "3371:3306"
+    restart: always
     container_name: rating-db
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: "rating"
-      MYSQL_USER: "rating"
-      MYSQL_PASSWORD: "rating"
       MYSQL_ROOT_PASSWORD: "12345678"
     healthcheck:
-      test: mysql -urating -p12345678 -e 'SELECT 1'
+      test: mysql -uroot -p12345678 -e 'SELECT 1'
       interval: 20s
       timeout: 1s
     volumes:
       - "db-data:/var/lib/mysql"
-    depends_on:
-      movie-db:
-        condition: service_healthy
 volumes:
   db-data:
